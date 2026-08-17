@@ -124,8 +124,7 @@ pip install -r requirements.txt
 
 The complete implementation is available in the Jupyter/Google Colab notebook:
 
-[`wafer_fault_classification.ipynb`](./wafer_fault_classification.ipynb)
-
+[`wafer_fault_classification.ipynb`](./notebooks/wafer_fault_classification.ipynb)
 The notebook contains the complete workflow, including:
 
 * Dataset preparation
@@ -180,7 +179,11 @@ It serves as a foundation for further exploration of **AI-driven semiconductor i
 wafer-defect-classification/
 │
 ├── README.md
-├── wafer_fault_classification.ipynb
+├── requirements.txt
+├── .gitignore
+│
+├── notebooks/
+│   └── wafer_fault_classification.ipynb
 │
 ├── training_history.png
 ├── best_model_confusion_matrix.png
