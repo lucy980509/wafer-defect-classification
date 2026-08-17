@@ -112,6 +112,14 @@ These results suggest that visually similar defect patterns and class imbalance 
 * Google Colab
 * Kaggle API
 
+## Requirements
+
+Install the required Python packages with:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Notebook
 
 The complete implementation is available in the Jupyter/Google Colab notebook:
