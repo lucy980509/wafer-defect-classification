@@ -217,6 +217,7 @@ C++ deployment repository:
 
 https://github.com/lucy980509/wafer-cpp-inference
 
+```
 wafer-defect-classification/
 │
 ├── README.md
@@ -233,3 +234,4 @@ wafer-defect-classification/
 │
 └── models/
     └── best_wafer_fault_cnn.pth
+```
