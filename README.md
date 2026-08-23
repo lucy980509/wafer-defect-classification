@@ -159,7 +159,7 @@ pip install -r requirements.txt
 
 The complete implementation is available in the Jupyter/Google Colab notebook:
 
-[`wafer_fault_classification.ipynb`](./notebooks/wafer_fault_classification.ipynb)
+[`Wafer_Defect_Classification.ipynb`](./notebooks/Wafer_Defect_Classification.ipynb)
 The notebook contains the complete workflow, including:
 
 * Dataset preparation
