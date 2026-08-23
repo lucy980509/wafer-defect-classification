@@ -102,19 +102,19 @@ The final CNN model achieved a validation weighted F1 score of **0.8512**.
 
 The training and validation curves show how model performance changed across epochs.
 
-![Training History](./training_history.png)
+![Training History](./images/training_history.png)
 
 ### Confusion Matrix
 
 The confusion matrix provides a class-level view of the model's predictions and highlights which defect categories are most frequently confused with one another.
 
-![Best Model Confusion Matrix](./best_model_confusion_matrix.png)
+![Best Model Confusion Matrix](./images/best_model_confusion_matrix.png)
 
 ### Misclassified Samples
 
 The following examples show wafer maps that were incorrectly classified by the best-performing model during validation.
 
-![Misclassified Samples](./misclassified_samples.png)
+![Misclassified Samples](./images/misclassified_samples.png)
 
 ## Error Analysis
 
