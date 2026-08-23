@@ -77,7 +77,8 @@ Flatten
         ↓
 Linear
         ↓
-8 defect classes```
+8 defect classes
+```
 
 ## Evaluation
 
