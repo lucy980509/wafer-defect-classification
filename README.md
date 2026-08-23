@@ -34,10 +34,11 @@ The project follows the following pipeline:
 3. Encode categorical defect labels into numerical classes
 4. Split the dataset into training and validation sets
 5. Address class imbalance using class-weighted loss
-6. Convert wafer maps into CNN-compatible image tensors
+6. Normalize and resize wafer maps to 24 × 24 input images
 7. Train a CNN using PyTorch
-8. Evaluate model performance using F1 score and classification metrics
-9. Analyze misclassified wafer maps
+8. Select the best model based on validation F1 score
+9. Evaluate model performance using classification metrics
+10. Analyze misclassified wafer maps
 
 ### Model
 
@@ -52,6 +53,31 @@ The training pipeline uses:
 * Max Pooling
 * Batch-based training
 * GPU acceleration when available
+
+### Architecture
+
+The CNN takes a single-channel 24 × 24 wafer map as input.
+
+```text
+Input: 1 × 24 × 24
+        ↓
+Conv2D (1 → 16)
+        ↓
+ReLU
+        ↓
+MaxPool 2 × 2
+        ↓
+Conv2D (16 → 32)
+        ↓
+ReLU
+        ↓
+MaxPool 2 × 2
+        ↓
+Flatten
+        ↓
+Linear
+        ↓
+8 defect classes```
 
 ## Evaluation
 
@@ -102,15 +128,16 @@ These results suggest that visually similar defect patterns and class imbalance 
 
 ## Technologies
 
-* Python
-* PyTorch
-* NumPy
-* pandas
-* scikit-learn
-* Matplotlib
-* Seaborn
-* Google Colab
-* Kaggle API
+- Python
+- PyTorch
+- NumPy
+- pandas
+- scikit-learn
+- OpenCV
+- Matplotlib
+- Seaborn
+- Google Colab
+- Kaggle API
 
 ## Requirements
 
@@ -167,11 +194,11 @@ Potential improvements include:
 
 ## Project Goal
 
-This project was developed to gain practical experience in applying deep learning and computer vision techniques to a semiconductor manufacturing problem.
+This project was developed to build a practical deep learning pipeline for semiconductor wafer defect classification.
 
-Beyond classification performance, the project explores how machine learning can be applied to **automated semiconductor wafer inspection**.
+The project focuses on applying CNN-based computer vision techniques to automated wafer inspection while addressing real-world challenges such as class imbalance and visually similar defect patterns.
 
-It serves as a foundation for further exploration of **AI-driven semiconductor inspection, computer vision, and intelligent hardware systems**.
+This project serves as the foundation for a separate model deployment project focused on C++ inference.
 
 ## Project Structure
 
