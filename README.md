@@ -86,13 +86,15 @@ Because the dataset contains imbalanced defect classes, **weighted F1 score** wa
 
 ### Validation Results
 
-| Metric      |  Score |
-| ----------- | -----: |
-| Accuracy    | 83.05% |
-| Weighted F1 | 83.53% |
-| Macro F1    | 77.73% |
+The best model was selected based on validation weighted F1 score.
 
-The classification report also provides class-level precision, recall, and F1 scores to identify defect categories that are more difficult for the model to distinguish.
+| Metric | Score |
+|---|---:|
+| Accuracy | 84.74% |
+| Weighted F1 | 85.12% |
+| Macro F1 | 79.49% |
+
+The final CNN model achieved a validation weighted F1 score of **0.8512**.
 
 ## Results Visualization
 
@@ -123,7 +125,12 @@ The project includes:
 * Visualization of misclassified wafer maps
 * Overall validation error analysis
 
-The error analysis showed that performance varied considerably across defect categories. In particular, classes such as **Scratch** and **Loc** were more challenging to classify.
+The error analysis showed that performance varied across defect categories.
+
+Classes such as **Scratch** and **Loc** remained challenging for the model, achieving lower F1 scores:
+
+- Scratch: 0.4743
+- Loc: 0.6565
 
 These results suggest that visually similar defect patterns and class imbalance remain important challenges for wafer defect classification.
 
@@ -201,9 +208,14 @@ The project focuses on applying CNN-based computer vision techniques to automate
 
 This project serves as the foundation for a separate model deployment project focused on C++ inference.
 
-## Project Structure
+## Deployment Project
 
-```text
+The trained CNN model was exported to ONNX format and deployed using a C++ inference engine.
+
+C++ deployment repository:
+
+https://github.com/lucy980509/wafer-cpp-inference
+
 wafer-defect-classification/
 │
 ├── README.md
@@ -211,9 +223,12 @@ wafer-defect-classification/
 ├── .gitignore
 │
 ├── notebooks/
-│   └── wafer_fault_classification.ipynb
+│   └── Wafer_Defect_Classification.ipynb
 │
-├── training_history.png
-├── best_model_confusion_matrix.png
-└── misclassified_samples.png
-```
+├── images/
+│   ├── training_history.png
+│   ├── confusion_matrix.png
+│   └── misclassified_samples.png
+│
+└── models/
+    └── best_wafer_fault_cnn.pth
