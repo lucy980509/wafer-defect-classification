@@ -227,7 +227,7 @@ wafer-defect-classification/
 │
 ├── images/
 │   ├── training_history.png
-│   ├── confusion_matrix.png
+│   ├── best_model_confusion_matrix.png
 │   └── misclassified_samples.png
 │
 └── models/
