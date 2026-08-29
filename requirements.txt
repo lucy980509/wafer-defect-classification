@@ -7,3 +7,5 @@ torch
 torchvision
 Pillow
 opencv-python==4.14.0.94
+onnx
+onnxscript
