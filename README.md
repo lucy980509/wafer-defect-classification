@@ -278,7 +278,7 @@ The confusion matrix provides a class-level view of the final model's prediction
 
 Examples of incorrectly classified wafer maps from the **test set** can be visualized to investigate common failure patterns.
 
-![Misclassified Samples](./images/misclassified_samples.png)
+![Misclassified Samples](./images/misclassified_sample_images.png)
 
 ## Error Analysis
 
@@ -423,7 +423,7 @@ wafer-defect-classification/
 ├── images/
 │   ├── training_history.png
 │   ├── test_confusion_matrix.png
-│   └── misclassified_samples.png
+│   └── misclassified_sample_images.png
 │
 └── models/
     └── best_wafer_fault_cnn.pth
